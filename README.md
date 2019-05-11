@@ -35,6 +35,12 @@ const BoundaryHOC = ProtectedComponent =>
   };
 ```
 
+4. this.setState(null)
+   state에 null을 return함으로써,
+   Component가 더 이상 update 되는 것을 막는다!
+   Component를 변경하는 것이 아니라,
+   Component가 update되는 것을 막는것.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
