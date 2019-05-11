@@ -10,6 +10,30 @@
 자식 Component의 error를 handle 할 수 있게 되었다.
 error가 발생해도 전체 react app이 다 죽어버리는 것이 아니라,
 에러가 난 부분만 isolate해서 처리할 수 있다.
+하지만 각 Component 마다 다 customize 하기 보다는
+아래와 같은 형태로 한 곳으로 묶어주는 것이 좋다.
+
+```js
+const BoundaryHOC = ProtectedComponent =>
+  class Boundary extends Component {
+    state = {
+      hasError: false
+    };
+    componentDidCatch = () => {
+      this.setState({
+        hasError: true
+      });
+    };
+    render() {
+      const { hasError } = this.state;
+      if (hasError) {
+        return <ErrorFallback />;
+      } else {
+        return <ProtectedComponent />;
+      }
+    }
+  };
+```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
