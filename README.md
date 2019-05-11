@@ -6,6 +6,11 @@
 
 2. Portal. #root 이외의 element도 react를 통해서 변경할 수 있다.
 
+3.Error Boundaries
+자식 Component의 error를 handle 할 수 있게 되었다.
+error가 발생해도 전체 react app이 다 죽어버리는 것이 아니라,
+에러가 난 부분만 isolate해서 처리할 수 있다.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
