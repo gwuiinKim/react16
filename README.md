@@ -2,11 +2,14 @@
 
 4가지 feature
 
-1. Fragment. 불필요하게 span등의 태그로 감쌀 필요가 없어졌다. 그리고 <> 이런식으로 감쌀 수도 있게 됨. ( 별로 사용되지 않을 수도 있지만 string을 return할 수도 있다.)
+### Fragment
 
-2. Portal. #root 이외의 element도 react를 통해서 변경할 수 있다.
+불필요하게 span등의 태그로 감쌀 필요가 없어졌다. 그리고 <> 이런식으로 감쌀 수도 있게 됨. ( 별로 사용되지 않을 수도 있지만 string을 return할 수도 있다.)
 
-3.Error Boundaries
+### Portal. #root 이외의 element도 react를 통해서 변경할 수 있다.
+
+### Error Boundaries
+
 자식 Component의 error를 handle 할 수 있게 되었다.
 error가 발생해도 전체 react app이 다 죽어버리는 것이 아니라,
 에러가 난 부분만 isolate해서 처리할 수 있다.
@@ -35,11 +38,12 @@ const BoundaryHOC = ProtectedComponent =>
   };
 ```
 
-4. this.setState(null)
-   state에 null을 return함으로써,
-   Component가 더 이상 update 되는 것을 막는다!
-   Component를 변경하는 것이 아니라,
-   Component가 update되는 것을 막는것.
+### this.setState(null)
+
+state에 null을 return함으로써,
+Component가 더 이상 update 되는 것을 막는다!
+Component를 변경하는 것이 아니라,
+Component가 update되는 것을 막는것.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
